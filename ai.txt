@@ -1,0 +1,5 @@
+# Do webcrawlers actually respect this? I hope so...
+
+User-Agent: *
+Disallow: /
+Disallow: *
