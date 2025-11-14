@@ -1,2 +1,5 @@
-This is just a small project for a school course.
-Nothing to see here.
+# SDEV153
+
+This is a final project for a web development course.
+
+🌐 [View the site](https://ajcolson.github.io/sdev153/)
