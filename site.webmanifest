@@ -1,7 +1,32 @@
 {
   "name":"SDEV153",
   "short_name":"SDEV153",
-  "icons":[ ],
+  "icons":[
+    {
+      "src":"/favicons/favicon-256px.png",
+      "sizes": "256x256",
+      "type": "imaage/png"
+    },
+    {
+      "src":"/favicons/favicon-128px.png",
+      "sizes": "128x128",
+      "type": "imaage/png"
+    },{
+      "src":"/favicons/favicon-64px.png",
+      "sizes": "64x64",
+      "type": "imaage/png"
+    },
+    {
+      "src":"/favicons/favicon-32px.png",
+      "sizes": "32x32",
+      "type": "imaage/png"
+    },
+    {
+      "src":"/favicons/favicon-16px.png",
+      "sizes": "16x16",
+      "type": "imaage/png"
+    }
+   ],
   "theme_color":"#ffffff",
   "background_color":"#ffffff",
   "display":"standalone"
