@@ -16,6 +16,14 @@ let LS = {
   }
 }
 
+//
+// although we're approaching this as if we are deploying to a root of the site, GitHub pages isn't cool like that
+// If we happen to be running from the project's GitHub page, let's be sure to include the projects name as a prefix to links
+//
+let GLOBAL_PATH_PREFIX = ""
+if (window.location.hostname == "ajcolson.github.io")
+  GLOBAL_PATH_PREFIX = "/sdev153"
+
 
 //
 // Theme Management
@@ -49,11 +57,10 @@ let TopBarNavItems = [
   {
     "type": "dropdown",
     "text": "Pages",
-    "href": "#",
     "sub_nav":[
       {
         "text": "Hello World!",
-        "href":"/pages/hello"
+        "href":"/pages/hello/"
       },
       {
         "text": "Ipsum",
@@ -68,7 +75,7 @@ let TopBarNavItems = [
 ]
 function BuildTopNavBar(){
   let NavBar = document.querySelector("#MainNavbar .navbar-nav")
-
+  
   for (let Item of TopBarNavItems){
     if (Item.type == "dropdown"){
       
@@ -77,7 +84,7 @@ function BuildTopNavBar(){
       
       let DropDownItemLink = document.createElement("a")
       DropDownItemLink.classList.add("nav-link", "dropdown-toggle")
-      DropDownItemLink.href = Item.href
+      DropDownItemLink.href = "#"
       DropDownItemLink.role = "button"
       DropDownItemLink.dataset.bsToggle = "dropdown"
       DropDownItemLink.ariaExpanded = "false"
@@ -92,7 +99,7 @@ function BuildTopNavBar(){
         let DropDownNavItem = document.createElement("li")
         let DropDownItemLink = document.createElement("a")
         DropDownItemLink.classList.add("dropdown-item")
-        DropDownItemLink.href = DropDownItem.href
+        DropDownItemLink.href = `${GLOBAL_PATH_PREFIX}${DropDownItem.href}`
         DropDownItemLink.innerHTML = DropDownItem.text
 
         DropDownNavItem.append(DropDownItemLink)
@@ -107,7 +114,7 @@ function BuildTopNavBar(){
 
       let NavItemLink = document.createElement("a")
       NavItemLink.classList.add("nav-link")
-      NavItemLink.href = Item.href
+      NavItemLink.href = `${GLOBAL_PATH_PREFIX}${Item.href}`
       NavItemLink.innerHTML = Item.text
 
       if (window.location.pathname == Item.href){
