@@ -29,16 +29,26 @@ if (window.location.hostname == "ajcolson.github.io")
 // Theme Management
 //
 function ToggleTheme(){
-  if (LS.g("theme") == null){
-    LS.d("theme","dark")
-  }
-
-  let currentTheme = LS.g("theme")
+  let currentTheme = document.querySelector("body").dataset.bsTheme
   let newTheme = (currentTheme=="dark")?"light":"dark"
-
-  document.querySelector("body").dataset.bsTheme = newTheme
   LS.s("theme",newTheme)
+  document.querySelector("body").dataset.bsTheme = newTheme
+  document.querySelector("#themeToggleIcon").innerHTML = (newTheme == "dark") ? "light_mode" : "dark_mode"
 }
+
+document.addEventListener("DOMContentLoaded",(e)=>{
+  LS.d("theme","dark")
+
+  let theme = LS.g("theme")
+  document.querySelector("body").dataset.bsTheme = theme
+  document.querySelector("#themeToggleIcon").innerHTML = (theme == "dark") ? "light_mode" : "dark_mode"
+
+  
+  document.querySelector("#themeToggleIcon").addEventListener("click",(e)=>{
+    ToggleTheme();
+  })
+})
+
 
 //
 // Instead of having to manually edit the navbar on every page, let's just do this dynamically on every page from one master list.

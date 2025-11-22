@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>SDEV153 - Hello World!</title>
+    <link rel="icon" type="image/x-icon" href="../../favicons/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -41,8 +42,37 @@
           <div class="col"><!-- This is just for spacing --></div>
           <div class="col-12">
             <h1>Hello World!</h1>
+            <p>You usually see the text "hello world" anytime a program or website is first being tested. This site is no different. However, to have a bit of fun, let's create some custom messages!</p>
+            <p>In the form below, we can change who or what we are saying hello to and we change what the message says.</p>
+            <form id="msgForm" class="border p-3 rounded-4">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="msgTarget" placeholder="John Doe">
+                <label for="msgTarget">Person/Place/Thing</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Write your message here." id="msgText" style="height: 100px"></textarea>
+                <label for="msgText">Write your message here...</label>
+              </div>
+              <button type="submit" id="show-msg-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#msgModal">Say Hello!</button>
+            </form>
           </div>
           <div class="col"><!-- This is just for spacing --></div>
+        </div>
+      </div>
+      <div class="modal fade" id="msgModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Hello, <span id="modal_msgTarget">World</span>!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modal_msgText" class="modal-body">
+              Thank you for visiting this page. Click the "Close" button below to dismiss this message.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -50,6 +80,7 @@
       <nav class="navbar fixed-bottom bg-body-tertiary">
         <div class="container-fluid">
           <span>Built by: <a target="_blank" href="https://ajcolson.com">Alex Colson</a>.</span>
+          <div class="float-end"><span id="themeToggleIcon" class="material-symbols-rounded no-select cursor-pointer"></span></div>
         </div>
       </nav>
     </footer>

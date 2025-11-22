@@ -13,18 +13,23 @@ const CardsInMyHand = [
     "text": "Come say hello to the world...",
     "action_text": "Read the article",
     "icon":"",
+    "img":"./pages/hello/hello_world.jpg",
+    "img_alt":"Hello, World!",
     "target":"./pages/hello"
   }, {
     "title": "Ipsum",
     "text": "Let's do more than just Lorem.",
     "action_text": "Read the article",
     "icon":"",
+    "img":"placeholder_image.png",
     "target":"./pages/Ipsum"
  }, {
     "title": "JavaScript Under Pressure",
     "text": "How good is your JavaScript skills?",
     "action_text": "Read the article",
     "icon":"",
+    "img":"./pages/javascript-under-pressue/images/icons8-javascript-240.png",
+    "img_alt":"Javascript Icon",
     "target":"./pages/javascript-under-pressue"
  }
 ]
@@ -45,6 +50,14 @@ const DeckBuilder = {
 
     let card = document.createElement("div")
     card.classList.add("card","m-3","front-page-card", "d-flex")
+
+    if (Card.img !== ""){
+      let card_img = document.createElement("img")
+      card_img.classList.add("card-img-top")
+      card_img.alt = Card.img_alt
+      card_img.src = Card.img
+      card.append(card_img)
+    }
 
     let card_body = document.createElement("div")
     card_body.classList.add("card-body")
