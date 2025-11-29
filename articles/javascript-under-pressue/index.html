@@ -44,26 +44,39 @@
         <div class="row mt-4">
           <div class="col"><!-- This is just for spacing --></div>
           <div class="col-12">
-            <h1>You Can't JavaScript Under Pressure</h3>
-            <div>Before reading this article, you should check out the <a target="_blank" href="https://web.archive.org/web/20141205235826/http://games.usvsth3m.com/javascript-under-pressure/">original site and game</a>.</div>
-            <div id="answer1">
-              <pre class="border border-secondary"><code class="language-javascript">// --1--
+            <h1>You Can't JavaScript Under Pressure</h1>
+            <div>On a now defunct website, usvsth3m.com, created a challenge game that tested the player's ability to write JavaScript quickly with a timer running. The game was aptly called "You Can't JavaScript Under Pressure.</div>
+            <div>Although the orginal site has been shutdowdn, you can still find and check out the <a target="_blank" href="https://web.archive.org/web/20141205235826/http://games.usvsth3m.com/javascript-under-pressure/">original site and game</a> on the Internet Archive.</div>
+            <div>In this article, I will share both the questions from the game and offer solutions to the questions. Feel free to play along with me or just review the answers. Finally, at the end of the page I will include a video of my full playthrough.</div>
+            <div class="game-question-block my-5" id="answer1">
+              <h2>Question 1</h2>
+              <img src="images/q1.png" />
+              <button id="collapse-btn-q1" class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#q1-answer" aria-expanded="false" aria-controls="q1-answer"><span id="q1-answer-action">Show</span> answer</button>
+              <div class="collapse" id="q1-answer"><pre class="border border-secondary"><code class="language-javascript">// --1--
 function doubleInteger(i) {
   // Nothing too crazy here, we just return the product
   return 2*i
-}</code></pre>
+}</code></pre></div>
             </div>
-            <div id="answer2">
-              <pre class="border border-secondary"><code class="language-javascript">// --2--
+            <hr>
+            <div class="game-question-block my-5" id="answer2">
+              <h2>Question 2</h2>
+              <img src="images/q2.png" />
+              <button id="collapse-btn-q2" class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#q2-answer" aria-expanded="false" aria-controls="q2-answer"><span id="q2-answer-action">Show</span> answer</button>
+              <div class="collapse" id="q2-answer"><pre class="border border-secondary"><code class="language-javascript">// --2--
 function isNumberEven(i) {
   // Again, nothing too crazy here.
   // All even numbers modulo 2 will have a zero remainder,
   // All odd numbers have a non-zero remainder
   return (i % 2) == 0    
-}</code></pre>
+}</code></pre></div>
             </div>
-            <div id="answer3">
-              <pre class="border border-secondary"><code class="language-javascript">// --3--
+            <hr>
+            <div class="game-question-block my-5" id="answer3">
+              <h2>Question 3</h2>
+              <img src="images/q3.png" />
+              <button id="collapse-btn-q3" class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#q3-answer" aria-expanded="false" aria-controls="q3-answer"><span id="q3-answer-action">Show</span> answer</button>
+              <div class="collapse" id="q3-answer"><pre class="border border-secondary"><code class="language-javascript">// --3--
 // Things start to get interesting here ...
 function getFileExtension(i) {
   /*
@@ -82,10 +95,14 @@ function getFileExtension(i) {
   // If the array length isn't 2, we'll just return false.
   // If the array length is exactly 2, we return the second element
   return (s.length != 2) ? false : s[1]
-}</code></pre>
+}</code></pre></div>
             </div>
-            <div id="answer4">
-              <pre class="border border-secondary"><code class="language-javascript">// --4--
+            <hr>
+            <div class="game-question-block my-5" id="answer4">
+              <h2>Question 4</h2>
+              <img src="images/q4.png" />
+              <button id="collapse-btn-q4" class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#q4-answer" aria-expanded="false" aria-controls="q4-answer"><span id="q4-answer-action">Show</span> answer</button>
+              <div class="collapse" id="q4-answer"><pre class="border border-secondary"><code class="language-javascript">// --4--
 function longestString(i) {
   // This is pretty straightforward...
 
@@ -109,10 +126,14 @@ function longestString(i) {
   }
   // at the end of the full loop, we should be left with the longest string, which we can return
   return str
-}</code></pre>
+}</code></pre></div>
             </div>
-            <div id="answer5">
-              <pre class="border border-secondary"><code class="language-javascript">// --5--
+            <hr>
+            <div class="game-question-block my-5" id="answer5">
+                <h2>Question 5</h2>
+              <img src="images/q5.png" />
+              <button id="collapse-btn-q5" class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#q5-answer" aria-expanded="false" aria-controls="q5-answer"><span id="q5-answer-action">Show</span> answer</button>
+              <div class="collapse" id="q5-answer"><pre class="border border-secondary"><code class="language-javascript">// --5--
 // This is a really fun question, albeit simple looking at first glance
 function arraySum(i) {
   // Let's get our sum value going...
@@ -161,9 +182,12 @@ function arraySum(i) {
 */
 function isArray(a){
   return Object.prototype.toString.call(a) === '[object Array]'
-}</code></pre>
+}</code></pre></div>
             </div>
-            <div style="padding-bottom: 56.25%; position: relative;" id="yt-container">
+            <hr>
+            <h2>Video of my Playthrough</h2>
+            <div>Can you can beat my time?</div>
+            <div style="padding-bottom: 56.25%; position: relative; margin-top: 1em;" id="yt-container">
               <iframe style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/XkEA8JRdieU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" ></iframe>
             </div>
           </div>

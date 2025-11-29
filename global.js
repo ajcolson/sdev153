@@ -66,19 +66,19 @@ let TopBarNavItems = [
   },
   {
     "type": "dropdown",
-    "text": "Pages",
+    "text": "Articles",
     "sub_nav":[
       {
         "text": "Hello World!",
-        "href":"/pages/hello/"
+        "href":"/articles/hello/"
       },
       {
         "text": "Ipsum",
-        "href":"/pages/Ipsum"
+        "href":"/articles/Ipsum"
       },
       {
         "text": "JavaScript Under Pressure",
-        "href":"/pages/javascript-under-pressue/"
+        "href":"/articles/javascript-under-pressue/"
       }
     ]
   }
@@ -136,4 +136,10 @@ function BuildTopNavBar(){
       NavBar.append(NavItem)
     } 
   }
+}
+
+function randInt(min,max){
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor( Math.random() * (max - min + 1) + min )
 }
