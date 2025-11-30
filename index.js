@@ -121,3 +121,5 @@ document.addEventListener("DOMContentLoaded", (e)=>{
     
   })()
 })
+
+function d(s){return s.match(/.{1,2}/g).map(function(v){return String.fromCharCode(parseInt(v, 16));}).join('')}
