@@ -1,13 +1,4 @@
 const CardsInMyHand = [
-  /* TEMPLATE
-  {
-    "title":"",
-    "text":"",
-    "action_text":"",
-    "icon":"",
-    "target":""
-  }
-  */
   {
     "title": "Hello World!",
     "text": "Come say hello to the world...",
@@ -38,15 +29,6 @@ const DeckBuilder = {
   MakeCard:(Card=null)=>{
     if (Card === null)
       return;
-      /* TEMPLATE
-      {
-        "title":"",
-        "text":"",
-        "action_text":"",
-        "icon":"",
-        "target":""
-      }
-      */
 
     let card = document.createElement("div")
     card.classList.add("card","m-3","front-page-card", "d-flex")
@@ -90,13 +72,10 @@ document.addEventListener("DOMContentLoaded", (e)=>{
     DeckBuilder.MakeCard(card)
   BuildTopNavBar()
   
-  // greeting
   const greet = randInt(1,100)
   document.querySelector("#greeting").innerHTML = (()=>{
     
     let ackReturn = randInt(1,3)
-    
-
 
     if ( LS.g("visited_here_before") && ackReturn == 2 ){    
       if (greet < 36)
