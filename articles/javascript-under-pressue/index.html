@@ -188,9 +188,16 @@ function isArray(a){
             </div>
             <hr>
             <h2>Video of my Playthrough</h2>
-            <div>Can you can beat my time?</div>
-            <div style="padding-bottom: 56.25%; position: relative; margin-top: 1em;" id="yt-container">
+            <p>Can you can beat my time? Note: If YouTube is down, you can switch to playing the video directly from the website. Simply use the toggle below.</p>
+            <div class="form-check form-switch no-select">
+              <input class="form-check-input" type="checkbox" role="switch" id="vidSrcToggle">
+              <label class="form-check-label" for="vidSrcToggle">Play From Local Source</label>
+            </div>
+            <div id="yt-container">
               <iframe style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/XkEA8JRdieU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" ></iframe>
+            </div>
+            <div class="hidden" id="alt-vid-container">
+              <video src="./videos/iCanJavaScriptUnderPressure.mp4" type="video/mp4" controls></video>
             </div>
           </div>
           <div class="col"><!-- This is just for spacing --></div>

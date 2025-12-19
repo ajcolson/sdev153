@@ -49,3 +49,13 @@ document.querySelector("#collapse-btn-q5").addEventListener("click",(e)=>{
   answer_showing[5] = !answer_showing[5]
   document.querySelector("#q5-answer-action").innerHTML = (answer_showing[5]) ? "Hide" : "Show"
 })
+
+document.querySelector("#vidSrcToggle").addEventListener("click",(e)=>{
+  if (document.querySelector("#vidSrcToggle").checked){
+    document.querySelector("#yt-container").classList.add("hidden")
+    document.querySelector("#alt-vid-container").classList.remove("hidden")
+  } else {
+    document.querySelector("#yt-container").classList.remove("hidden")
+    document.querySelector("#alt-vid-container").classList.add("hidden")
+  }
+})
