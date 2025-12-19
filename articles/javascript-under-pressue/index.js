@@ -2,11 +2,24 @@ document.addEventListener("DOMContentLoaded", (e)=>{
   BuildTopNavBar()
   setCodeTheme()
   hljs.highlightAll()
+  toggleVidSrc()
 })
 
 document.querySelector("#themeToggleIcon").addEventListener("click",(e)=>{
   setCodeTheme(true)
 })
+
+function toggleVidSrc(){
+  if (document.querySelector("#vidSrcToggle").checked){
+    document.querySelector("#yt-container").classList.add("hidden")
+    document.querySelector("#alt-vid-container").classList.remove("hidden")
+    LS.s("use-local-src",true)
+  } else {
+    document.querySelector("#yt-container").classList.remove("hidden")
+    document.querySelector("#alt-vid-container").classList.add("hidden")
+    LS.s("use-local-src",false)
+  }
+}
 
 function setCodeTheme(invert=false){
   let currentTheme = document.querySelector("body").dataset.bsTheme
@@ -51,11 +64,5 @@ document.querySelector("#collapse-btn-q5").addEventListener("click",(e)=>{
 })
 
 document.querySelector("#vidSrcToggle").addEventListener("click",(e)=>{
-  if (document.querySelector("#vidSrcToggle").checked){
-    document.querySelector("#yt-container").classList.add("hidden")
-    document.querySelector("#alt-vid-container").classList.remove("hidden")
-  } else {
-    document.querySelector("#yt-container").classList.remove("hidden")
-    document.querySelector("#alt-vid-container").classList.add("hidden")
-  }
+  toggleVidSrc()
 })
