@@ -2,3 +2,9 @@
   width:25rem;
   display: inline-block !important;
 }
+
+#card-euler img{
+  padding: 5px;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}

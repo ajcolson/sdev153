@@ -1,5 +1,6 @@
 const CardsInMyHand = [
   {
+    "id":"helloworld",
     "title": "Hello World!",
     "text": "Come say hello to the world...",
     "action_text": "Read the article",
@@ -8,6 +9,7 @@ const CardsInMyHand = [
     "img_alt":"Hello, World!",
     "target":"./articles/hello"
   }, {
+    "id":"ipsum",
     "title": "Ipsum",
     "text": "Let's do more than just Lorem.",
     "action_text": "Read the article",
@@ -15,13 +17,23 @@ const CardsInMyHand = [
     "img":"placeholder_image.png",
     "target":"./articles/Ipsum"
  }, {
+    "id":"jsup",
     "title": "JavaScript Under Pressure",
-    "text": "How good is your JavaScript skills?",
+    "text": "How good are your JavaScript skills?",
     "action_text": "Read the article",
     "icon":"",
     "img":"./articles/javascript-under-pressue/images/icons8-javascript-240.png",
     "img_alt":"Javascript Icon",
     "target":"./articles/javascript-under-pressue"
+ }, {
+    "id":"euler",
+    "title": "Project Euler",
+    "text": "Math + Programming = Fun?",
+    "action_text": "Read the article",
+    "icon":"",
+    "img":"./articles/euler/euler.jpg",
+    "img_alt": "A painting of Euler",
+    "target":"./articles/euler"
  }
 ]
 
@@ -32,6 +44,7 @@ const DeckBuilder = {
 
     let card = document.createElement("div")
     card.classList.add("card","m-3","front-page-card", "d-flex")
+    card.id = `card-${Card.id}`
 
     if (Card.img !== ""){
       let card_img = document.createElement("img")

@@ -79,6 +79,10 @@ let TopBarNavItems = [
       {
         "text": "JavaScript Under Pressure",
         "href":"/articles/javascript-under-pressue/"
+      },
+      {
+        "text": "Project Euler",
+        "href":"/articles/euler/"
       }
     ]
   }
